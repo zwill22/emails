@@ -16,19 +16,17 @@ async function loadTypedModule(path: string): Promise<EmailTemplate> {
   }
 }
 
-async function getFilePaths() {
-  const dirPath = path.join(import.meta.dirname, "../emails");
-
+async function getFilePaths(templatePath: string) {
   return new Map(
-    (await readdir(dirPath)).map((file) => [
+    (await readdir(templatePath)).map((file) => [
       file.split(".")[0],
-      path.join(dirPath, file),
+      path.join(templatePath, file),
     ]),
   );
 }
 
-async function getTemplates() {
-  const files = await getFilePaths();
+async function getTemplates(templatePath: string) {
+  const files = await getFilePaths(templatePath);
 
   let templates = await Promise.all(
     Array.from(files.entries()).map(
@@ -50,10 +48,11 @@ async function makeDir(dirpath: string) {
 
 export async function renderAll(
   props: EmailProps,
-  outputPath: string = "../output",
-  ext: string = "html",
+  templatePath: string,
+  outputPath: string,
+  ext: string,
 ) {
-  const templates = await getTemplates();
+  const templates = await getTemplates(templatePath);
 
   const output = await Promise.all(
     Array.from(templates.entries()).map(
@@ -77,8 +76,10 @@ export async function renderAll(
   );
 }
 
-export async function getRenderers(): Promise<Map<string, Renderer>> {
-  const templates = await getTemplates();
+export async function getRenderers(
+  templatePath: string,
+): Promise<Map<string, Renderer>> {
+  const templates = await getTemplates(templatePath);
 
   const renderers = Array.from(templates.entries()).map(
     ([name, template]): [string, Renderer] => [
