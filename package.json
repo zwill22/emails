@@ -8,6 +8,7 @@
     "dev": "email dev",
     "export": "email export",
     "convert": "node tools/convert.js",
+    "example": "tsx example/index.ts",
     "test": "vitest"
   },
   "dependencies": {

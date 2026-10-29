@@ -1,0 +1,24 @@
+name: Name B Goode
+info:
+  - Nerd
+  - Rocker
+title: "{{title}}"
+content: "{{content}}"
+headerLinks:
+  - href: "mailto:email@icloud.com"
+    text: "email@icloud.com"
+    img: "https://raw.githubusercontent.com/zwill22/Signature/refs/heads/main/images/envelope.png"
+    alt: "Envelope Icon"
+
+  - href: "https://www.github.com/zwill22"
+    text: "github.com/zwill22"
+    img: "https://raw.githubusercontent.com/zwill22/Signature/refs/heads/main/images/github.png"
+    alt: "GitHub Logo"
+footerLinks:
+  - href: "https://www.zmwill.uk"
+    text: "zmwill.uk"
+    img: "https://raw.githubusercontent.com/zwill22/Signature/refs/heads/main/images/globe.png"
+    alt: "Website Icon"
+    
+previewText: "{{previewText}}"
+copyright: I B A Writer

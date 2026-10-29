@@ -15,7 +15,7 @@ import {
   Tailwind,
 } from "react-email";
 import clsx from "clsx";
-import { ReactNode } from "react";
+import * as React from "react";
 import { previewData } from "../preview/preview";
 import { LinkProps, EmailProps } from "../types/types";
 
@@ -154,7 +154,7 @@ function Footer(props: EmailProps) {
     </Container>
   );
 }
-export default function BusinessEmail(props: EmailProps): ReactNode {
+export default function BusinessEmail(props: EmailProps): React.ReactNode {
   const preview = props.previewText ?? previewData.previewText!;
   const title = props.title ?? previewData.title;
   return (
