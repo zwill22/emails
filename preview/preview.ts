@@ -1,3 +1,6 @@
 import { loadData } from "@/tools/load";
+import path from "path";
 
-export const previewData = await loadData("../preview/preview.yml");
+const previewPath = path.join(import.meta.dirname, "../preview/preview.yml");
+
+export const previewData = await loadData(previewPath);
