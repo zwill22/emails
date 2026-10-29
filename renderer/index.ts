@@ -64,14 +64,13 @@ export async function renderAll(
     ),
   );
 
-  const dirpath = path.join(import.meta.dirname, outputPath);
-  await makeDir(dirpath);
+  await makeDir(outputPath);
 
   await Promise.all(
     output.map(async ([name, html]) => {
       const filename = `${name}.${ext}`;
 
-      const filepath = path.join(dirpath, filename);
+      const filepath = path.join(outputPath, filename);
       writeFile(filepath, html);
     }),
   );
