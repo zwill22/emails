@@ -1,14 +1,3 @@
-import { load } from "js-yaml";
-import { readFile } from "fs/promises";
-import path from "path";
-import { EmailProps } from "@/types/types";
+import { loadData } from "@/tools/load";
 
-async function loadData(): Promise<EmailProps> {
-  const previewPath = path.join(import.meta.dirname, "../preview/preview.yml");
-
-  const yaml = await readFile(previewPath, "utf-8");
-
-  return load(yaml) as EmailProps;
-}
-
-export const previewData = await loadData();
+export const previewData = await loadData("../preview/preview.yml");
