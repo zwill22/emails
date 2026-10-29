@@ -1,7 +1,7 @@
 import { render } from "react-email";
-import { EmailProps } from "@/types/types";
+import { EmailProps } from "../types/types";
 
-import { EmailTemplate, Renderer } from "@/types/types";
+import { EmailTemplate, Renderer } from "../types/types";
 import { mkdir, readdir, writeFile } from "fs/promises";
 import path from "path";
 import { existsSync } from "fs";
