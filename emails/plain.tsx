@@ -1,7 +1,7 @@
 import { Html, Head, Body, Container, Preview, Markdown } from "react-email";
 import { ReactNode } from "react";
-import { previewData } from "@/preview/preview";
-import { EmailProps } from "@/types/types";
+import { previewData } from "../preview/preview";
+import { EmailProps } from "../types/types";
 
 function Content(props: EmailProps) {
   const content = props.content ?? previewData.content!;

@@ -16,8 +16,8 @@ import {
 } from "react-email";
 import clsx from "clsx";
 import { ReactNode } from "react";
-import { previewData } from "@/preview/preview";
-import { LinkProps, EmailProps } from "@/types/types";
+import { previewData } from "../preview/preview";
+import { LinkProps, EmailProps } from "../types/types";
 
 function LinkRow({ href, text, img, alt }: LinkProps) {
   return (

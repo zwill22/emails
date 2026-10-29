@@ -9,9 +9,6 @@
     "noEmit": true,
     "strictNullChecks": true,
     "types": ["node"],
-    "paths": {
-      "@/*": ["./*"]
-    }
   },
   "include": ["**/*.ts", "**/*.tsx"],
   "exclude": ["node_modules", ".react-email"]
