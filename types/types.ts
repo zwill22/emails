@@ -12,8 +12,8 @@ export interface EmailProps {
   info?: string[];
   title?: string;
   content?: string;
-  links?: LinkProps[];
-  pictureLinks?: LinkProps[];
+  headerLinks?: LinkProps[];
+  footerLinks?: LinkProps[];
   previewText?: string;
   copyright?: string;
 }

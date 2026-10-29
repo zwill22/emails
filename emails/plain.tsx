@@ -4,7 +4,7 @@ import { previewData } from "@/preview/preview";
 import { EmailProps } from "@/types/types";
 
 function Content(props: EmailProps) {
-  const content = props.content ?? previewData.content;
+  const content = props.content ?? previewData.content!;
 
   return (
     <Container>
@@ -14,7 +14,7 @@ function Content(props: EmailProps) {
 }
 
 export default function PlainEmail(props: EmailProps): ReactNode {
-  const preview = props.previewText ?? previewData.preview;
+  const preview = props.previewText ?? previewData.previewText!;
   const title = props.title ?? previewData.title;
 
   return (

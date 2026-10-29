@@ -42,7 +42,7 @@ function LinkRow({ href, text, img, alt }: LinkProps) {
 }
 
 function LinkColumn(props: EmailProps) {
-  const links = props.links ?? previewData.links;
+  const links = props.headerLinks ?? previewData.headerLinks!;
 
   if (links.length == 0) {
     return <></>;
@@ -58,8 +58,8 @@ function LinkColumn(props: EmailProps) {
 }
 
 function Header(props: EmailProps) {
-  const name = props.name ?? previewData.name;
-  const info = props.info ?? previewData.info;
+  const name = props.name ?? previewData.name!;
+  const info = props.info ?? previewData.info!;
 
   return (
     <Container
@@ -82,7 +82,7 @@ function Header(props: EmailProps) {
   );
 }
 function Content(props: EmailProps) {
-  const content = props.content ?? previewData.content;
+  const content = props.content ?? previewData.content!;
 
   return (
     <Container
@@ -133,13 +133,9 @@ function PicLink({ href, img, alt }: LinkProps) {
 }
 
 function Footer(props: EmailProps) {
-  const copyright = props.copyright ?? previewData.copyright;
+  const copyright = props.copyright ?? previewData.copyright!;
 
-  const pictureLinks = props.pictureLinks ?? [
-    previewData.links[1],
-    previewData.links[2],
-    previewData.links[3],
-  ];
+  const pictureLinks = props.footerLinks ?? previewData.footerLinks!;
 
   return (
     <Container className="p-0 font-serif">
@@ -159,7 +155,7 @@ function Footer(props: EmailProps) {
   );
 }
 export default function BusinessEmail(props: EmailProps): ReactNode {
-  const preview = props.previewText ?? previewData.preview;
+  const preview = props.previewText ?? previewData.previewText!;
   const title = props.title ?? previewData.title;
   return (
     <Html>

@@ -1,27 +1,87 @@
-name: Name A Person PhD
+name: Name For A Person
 info:
   - Scientist
   - Strategist
   - Drone
-title: Email title
-preview: "A brief summary of the email"
+title: Title
 content: |
-  Look at this email:
+  # Content
 
-  # Email
+  This is the content of the email, specified by the `EmailProps` argument.
+  To change this text, pass a string to the `content` element.
+  Additional content is specified by other elements in the.
+  I will break these down here:
 
-  This is an important email for the attention of someone.
-  The email fully supports the Markdown format, for example lists:
+  ## EmailProps
 
-  - Point one
+  Here is a breakdown of the current properties supported by `EmailProps`, the placeholder values are in _italic_:
 
-  - *Bold point*
+  - `name`: A person's full name for the header (_Name For A Person_)
 
-  - _Italic point_
+  - `info`: A list of information about the person, such as job titles: (_Info, Scientist, Strategist_)
 
-  ## Code
+  - `title`: The email title (_Title_)
 
-  This can be either inline, for example \`constexpr x = 42;\`, or as a block:
+  - `content`: The emails contents in Markdown format. For a summary of what may be included, see below.
+
+  - `headerLinks`: A list of links for inclusion in the email's header. The format for these is explained below.
+
+  - `footerLinks`: A list of links for inclusion in the email's footer, same format as `headerLinks`.
+
+  - `previewText`: Some brief text summarising the email, this appears in the email list in most clients and is often the first few lines of the messsage (_Preview text showing summary of the email_)
+
+  - `copyright`: A copyright notice (_Person B Nameson_)
+
+  ### Markdown emails
+
+  The emails support markdown formatting, to demonstate the available formatting, I will provide some examples:
+
+  #### Titles
+
+  These can be written using:
+
+  - `# Title`
+
+  - `## Subtitle`
+
+  - `### Title 3`
+
+  - etc.
+
+  #### Formatting
+
+  Different text formatting is available, including:
+
+  1. Plain: `Plain`
+
+  2. **Bold**: `**Bold**`
+
+  3. _Italic_: `_Italic_`
+
+  #### Lists
+
+  Lists can be written in two ways:
+
+  **Numbered**:
+
+  ```md
+  1. One
+
+  2. Two
+  ```
+
+  **Unnumbered**:
+
+  ```md
+  - First point
+
+  - Second point
+  ```
+
+  #### Code
+
+  It is often necessary to include code listings.
+  These can be either inline, for example `constexpr x = 42;`, using \`constexpr x = 42;\`, or as a block:
 
   ```cpp
   int main() {
@@ -29,40 +89,76 @@ content: |
   }
   ```
 
-  I can also include a [link to my website][website], and pictures:
+  Written using:
 
-  ![GitHub logo][logo]
+  \`\`\`cpp
 
-  ### Quotes
+  int main() {
+
+  return 0;
+
+  }
+
+  \`\`\`
+
+  ### Links and images
+
+  Links can be included using:
+
+  - [click me](https://example.com): `[click me](example.com)`
+
+  - [click me][example-link]: `[click me][example-link]`
+
+  Where `example-link` is specified separately using:
+
+  ```md
+  [example-link]: https://example.com
+  ```
+
+  Images can be specified in a similar way. For example:
+
+  - ![GitHub Logo](https://raw.githubusercontent.com/zwill22/Signature/refs/heads/main/images/github.png): `![Github Logo](https://raw.githubusercontent.com/zwill22/Signature/refs/heads/main/images/github.png)`
+
+  - ![GitHub Logo][github-logo]: `![Github Logo][github-logo]`
+
+  #### Quotes
+
+  Quotes can be included in blocks using:
 
   > To lose is to win, and he who wins shall lose!
 
-  #### Lists
+  ```md
+  > To lose is to win and he who wins shall lose!
+  ```
 
-  1. Item one
+  #### Separators
 
-  2. Another Item
+  Contents may also be separated using a horizontal line separator, using
 
-  3. A more complicated item
-      1. Subitem A
-      
-      2. Subitem B
-      
-  4. Item four
+  `___`:
 
-  ##### Separators
+  ---
 
-  ___
+  ## Link Props
 
-  The contents may also be separated using 3 underscores, asterisks, or dashes.
+  Links are specified to the template using a `LinkProps` object, the arguments for which are summarised here:
 
-  ###### Summary
+  - `href`: The URL for the link
 
-  Markdown is handy for emails!
+  - `text`: The text displayed with the link (_Optional_)
 
-  [website]: https://www.zmwill.uk "My fabulous site"
-  [logo]: https://raw.githubusercontent.com/zwill22/website/refs/heads/main/public/logo.svg
-links:
+  - `img`: A link to an image to be displayed beside the link text
+
+  - `alt`: Alternative text to describe the image
+
+  ## Summary
+
+  Markdown is handy for emails! Edit `props.content` to remove this text.
+
+  [example-link]: https://example.com
+  [github-logo]: https://raw.githubusercontent.com/zwill22/Signature/refs/heads/main/images/github.png
+
+headerLinks:
   - href: "mailto:email@icloud.com"
     text: "email@icloud.com"
     img: "https://raw.githubusercontent.com/zwill22/Signature/refs/heads/main/images/envelope.png"
@@ -87,5 +183,20 @@ links:
     text: "zmwill.uk"
     img: "https://raw.githubusercontent.com/zwill22/Signature/refs/heads/main/images/globe.png"
     alt: "Internet Globe Icon"
+footerLinks:
+  - href: "https://linkedin.com"
+    text: "linkedin.com"
+    img: "https://raw.githubusercontent.com/zwill22/Signature/refs/heads/main/images/linkedin.png"
+    alt: "LinkedIn Logo"
 
+  - href: "https://www.github.com/zwill22"
+    text: "github.com/zwill22"
+    img: "https://raw.githubusercontent.com/zwill22/Signature/refs/heads/main/images/github.png"
+    alt: "GitHub Logo"
+
+  - href: "https://www.zmwill.uk"
+    text: "zmwill.uk"
+    img: "https://raw.githubusercontent.com/zwill22/Signature/refs/heads/main/images/globe.png"
+    alt: "Website Icon"
+previewText: Preview text showing a summary of the email
 copyright: "Person B Nameson"
