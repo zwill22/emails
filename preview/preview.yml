@@ -1,0 +1,91 @@
+name: Name A Person PhD
+info:
+  - Scientist
+  - Strategist
+  - Drone
+title: Email title
+preview: "A brief summary of the email"
+content: |
+  Look at this email:
+
+  # Email
+
+  This is an important email for the attention of someone.
+  The email fully supports the Markdown format, for example lists:
+
+  - Point one
+
+  - *Bold point*
+
+  - _Italic point_
+
+  ## Code
+
+  This can be either inline, for example \`constexpr x = 42;\`, or as a block:
+
+  ```cpp
+  int main() {
+      return 0;
+  }
+  ```
+
+  I can also include a [link to my website][website], and pictures:
+
+  ![GitHub logo][logo]
+
+  ### Quotes
+
+  > To lose is to win, and he who wins shall lose!
+
+  #### Lists
+
+  1. Item one
+
+  2. Another Item
+
+  3. A more complicated item
+      1. Subitem A
+      
+      2. Subitem B
+      
+  4. Item four
+
+  ##### Separators
+
+  ___
+
+  The contents may also be separated using 3 underscores, asterisks, or dashes.
+
+  ###### Summary
+
+  Markdown is handy for emails!
+
+  [website]: https://www.zmwill.uk "My fabulous site"
+  [logo]: https://raw.githubusercontent.com/zwill22/website/refs/heads/main/public/logo.svg
+links:
+  - href: "mailto:email@icloud.com"
+    text: "email@icloud.com"
+    img: "https://raw.githubusercontent.com/zwill22/Signature/refs/heads/main/images/envelope.png"
+    alt: "Envelope Icon"
+
+  - href: "https://linkedin.com"
+    text: "linkedin.com"
+    img: "https://raw.githubusercontent.com/zwill22/Signature/refs/heads/main/images/linkedin.png"
+    alt: "LinkedIn Logo"
+
+  - href: "https://www.github.com/zwill22"
+    text: "github.com/zwill22"
+    img: "https://raw.githubusercontent.com/zwill22/Signature/refs/heads/main/images/github.png"
+    alt: "GitHub Logo"
+
+  - href: "tel:+447900000000"
+    text: "+44 7900 000 000"
+    img: "https://raw.githubusercontent.com/zwill22/Signature/refs/heads/main/images/phone.png"
+    alt: "Phone Icon"
+
+  - href: "https://www.zmwill.uk"
+    text: "zmwill.uk"
+    img: "https://raw.githubusercontent.com/zwill22/Signature/refs/heads/main/images/globe.png"
+    alt: "Internet Globe Icon"
+
+copyright: "Person B Nameson"

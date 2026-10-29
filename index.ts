@@ -1,1 +1,1 @@
-export { default } from "./emails/template";
+export { default } from "./emails/business";
