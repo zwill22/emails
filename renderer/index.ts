@@ -1,10 +1,10 @@
 import { render } from "react-email";
-import { EmailProps } from "../types/types";
-
-import { EmailTemplate, Renderer } from "../types/types";
 import { mkdir, readdir, writeFile } from "fs/promises";
 import path from "path";
 import { existsSync } from "fs";
+
+import type { EmailProps, Renderer } from "../types/types";
+import type { EmailTemplate } from "../types/types";
 
 async function loadTypedModule(path: string): Promise<EmailTemplate> {
   try {
