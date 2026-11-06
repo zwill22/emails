@@ -32,10 +32,13 @@ async function getTemplates() {
 
   let templates = await Promise.all(
     Array.from(files.entries()).map(
-      async ([name, path]): Promise<[string, EmailTemplate]> => [
-        name,
-        await loadTypedModule(path),
-      ],
+      async ([name, path]): Promise<[string, EmailTemplate]> => {
+        if (name === undefined) {
+          throw new Error("undefined name");
+        }
+
+        return [name, await loadTypedModule(path)];
+      },
     ),
   );
 

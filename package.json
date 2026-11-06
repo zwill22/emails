@@ -9,6 +9,7 @@
     "export": "email export",
     "convert": "node tools/convert.js",
     "example": "tsx example/index.ts",
+    "compile": "tsc",
     "test": "vitest"
   },
   "dependencies": {
@@ -21,7 +22,10 @@
   },
   "devDependencies": {
     "@react-email/ui": "6.11.3",
+    "@types/css-tree": "^3.2.0",
+    "@types/html-to-text": "^9.0.4",
     "@types/node": "^26.6.5",
+    "@types/prismjs": "^1.26.6",
     "@types/react": "19.2.14",
     "@types/react-dom": "19.2.3",
     "tsx": "^4.23.15",

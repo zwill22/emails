@@ -17,7 +17,7 @@ import {
 import clsx from "clsx";
 import * as React from "react";
 import { previewData } from "../preview/preview";
-import { LinkProps, EmailProps } from "../types/types";
+import type { LinkProps, EmailProps } from "../types/types";
 
 function LinkRow({ href, text, img, alt }: LinkProps) {
   return (

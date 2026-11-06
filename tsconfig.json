@@ -1,14 +1,53 @@
 {
   "compilerOptions": {
-    "composite": false,
-    "module": "ESNext",
-    "moduleResolution": "bundler",
-    "jsx": "react-jsx",
-    "skipLibCheck": true,
+    "module": "esnext",
+
+    // Type Checking
+    "allowUnreachableCode": false,
+    "allowUnusedLabels": false,
+    "exactOptionalPropertyTypes": true,
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitOverride": true,
+    "noImplicitReturns": true,
+    "noPropertyAccessFromIndexSignature": true,
+    "noUncheckedIndexedAccess": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
     "strict": true,
-    "noEmit": true,
-    "strictNullChecks": true,
+
+    // Modules
+    "allowArbitraryExtensions": false,
+    "allowUmdGlobalAccess": false,
+    "moduleResolution": "bundler",
+    "resolveJsonModule": false,
     "types": ["node"],
+
+    // Emit
+    "declaration": true,
+    "noEmit": true,
+
+    // JavaScript
+    "allowJs": false,
+
+    // Editor support
+    "disableSizeLimit": false,
+    "plugins": [],
+
+    // Interop
+    "erasableSyntaxOnly": true,
+    "forceConsistentCasingInFileNames": true,
+    "verbatimModuleSyntax": true,
+    "moduleDetection": "force",
+
+    // Language
+    "jsx": "react-jsx",
+
+    // Projects
+    "composite": false,
+    "skipLibCheck": false,
+
+    // Output formatting
+    "noErrorTruncation": true
   },
   "include": ["**/*.ts", "**/*.tsx"],
   "exclude": ["node_modules", ".react-email"]
